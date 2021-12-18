@@ -315,7 +315,7 @@ button:not(:disabled),
 }
 @media (min-width: 768px) {
    .container {
-    max-width: 720px;
+    max-width: 760px;
   }
 }
 @media (min-width: 992px) {
@@ -831,8 +831,8 @@ button:not(:disabled),
     padding-left: 0 !important;
   }
 
-  .pe-md-4 {
-    padding-right: 1.5rem !important;
+  .pe-md-3 {
+    padding-right: 1rem !important;
   }
 }
 @media (min-width: 992px) {
