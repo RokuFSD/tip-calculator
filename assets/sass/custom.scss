@@ -1,30 +1,122 @@
 /* =================== Google Fonts ======================== */
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
 
-h2 {
-  letter-spacing: 0.5rem;
+/*=========== Custom colors ================*/
+$primary: hsl(172, 67%, 45%) !default;
+$secondary: hsl(183, 100%, 15%) !default;
+$success: hsl(186, 14%, 43%) !default;
+$info: hsl(184, 14%, 56%) !default;
+$warning: hsl(185, 41%, 84%) !default;
+$danger: hsl(189, 41%, 97%) !default;
+$light: hsl(0, 0%, 100%);
+
+/*=========== Custom variables ==============*/
+
+$font-family-sans-serif: "Space Mono", sans-serif;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 960px,
+  xxl: 960px,
+);
+
+@media (max-width: 767px) {
+  .container {
+    max-width: 425px !important;
+  }
 }
+
+/*=========== Custom input =================*/
+$input-placeholder-color: $info;
+$input-btn-focus-color: rgba(darken($primary, 2), 1);
+$input-btn-focus-width: 2px;
 
 input {
-  direction: rtl;
-}
-
-span {
-  display: block;
-}
-
-.title {
-  margin-top: -1rem;
+  text-align: right;
+  border-radius: 2rem;
 }
 
 .custom-input {
   max-width: 8.25rem;
 }
 
-.results {
-  min-height: 15rem;
+.input-tip::placeholder {
+  text-align: center;
 }
 
+.input-img {
+  position: absolute;
+  top: 15px;
+  left: 0.5rem;
+  z-index: 1000;
+}
+
+/*=========== Custom btns ==============*/
+
+/* I don't like the way I solved this, because of the use of !important, if there is a better way to solve it please leave a comment */
+
+.btn-primary:hover,
+.btn-primary:focus {
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.btn-primary:hover {
+  background-color: $warning !important;
+}
+
+.disabled {
+  background-color: rgb(lighten($success, 50), 0.2) !important;
+  border: none !important;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  border-color: transparent !important;
+  box-shadow: none !important;
+  color: $secondary !important;
+}
+
+.btn-secondary:hover {
+  background-color: $warning !important;
+}
+
+.btn-secondary:focus,
+.btn-secondary:active {
+  background-color: $primary !important;
+}
+
+/*================= BASE ====================*/
+
+h2 {
+  letter-spacing: 0.5rem;
+}
+
+.span-title {
+  display: block;
+}
+
+
+.tip-container {
+  border-radius: 1rem 1rem 0 0;
+
+  @media (min-width: 758px) {
+    border-radius: 1rem;
+  }
+}
+
+.results {
+  min-height: 15rem;
+  border-radius: 1rem;
+
+  p {
+    font-size: 2.5rem !important;
+  }
+}
+
+/*========== Remove arrows from input =============*/
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -34,23 +126,5 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
-
-$font-family-sans-serif: "Space Mono", sans-serif;
-
-$container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 960px,
-  xxl: 920px,
-);
-
-$primary: hsl(172, 67%, 45%) !default;
-$secondary: hsl(183, 100%, 15%) !default;
-$success: hsl(186, 14%, 43%) !default;
-$info: hsl(184, 14%, 56%) !default;
-$warning: hsl(185, 41%, 84%) !default;
-$danger: hsl(189, 41%, 97%) !default;
-$light: hsl(0, 0%, 100%);
 
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";

@@ -15,7 +15,7 @@
     <title>Frontend Mentor | Tip calculator app</title>
 
     <!-- ============== CSS ================ -->
-    <link rel="stylesheet" href="/assets/css/custom.css" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
@@ -29,32 +29,35 @@
     </style>
   </head>
   <body class="bg-warning">
-    <main class="container min-vh-100 d-flex align-items-center">
-      <article class="w-100">
+    <main class="container min-vh-100 d-flex align-items-center px-md-0">
+      <article class="w-100 px-md-0">
         <h2
           class="text-center lh-lg mt-3 mb-md-5 mt-md-0 text-uppercase text-success fw-bold"
         >
-          spli<span class="title">tter</span>
+          spli<span class="span-title mt-n3">tter</span>
         </h2>
         <div class="row">
           <div class="col-12 mt-3 mt-md-5">
-            <div class="row p-4 bg-light rounded-top" id="tip">
-              <form class="col-12 p-0 col-md-6 pe-md-4">
+            <div class="row p-4 bg-light tip-container" id="tip">
+              <form class="col-12 p-0 col-md-6 pe-md-4 pe-lg-5">
                 <label for="bill" class="form-label fw-bold text-success"
                   >Bill</label
                 >
 
-                <div class="input-group mb-4">
-                  <span class="input-group-text bg-danger border-0" id="">
-                    <img src="/assets/images/icon-dollar.svg" alt="" />
-                  </span>
+                <div class="input-group mb-4 bg-danger position-relative">
+                  <img
+                    src="/assets/images/icon-dollar.svg"
+                    alt=""
+                    class="input-img"
+                  />
                   <input
                     type="number"
                     name="bill"
                     id="bill"
                     min="0"
                     step="0.01"
-                    class="form-control border-0 bg-danger fw-bold fs-4 text-secondary"
+                    placeholder="0"
+                    class="form-control border-0 bg-danger fw-bold fs-4 text-secondary rounded"
                   />
                 </div>
                 <label for="select-tip" class="form-label text-success fw-bold"
@@ -62,45 +65,50 @@
                 >
 
                 <div class="row mb-4">
-                  <div class="col-6 col-md-4 pe-md-0">
+                  <div class="col-6 col-md-4 mb-3">
                     <button
-                      class="btn btn-lg btn-secondary w-100 fw-bold p-1 fs-4"
+                      class="btn btn-lg btn-secondary fw-bold p-1 fs-4 text-danger w-100"
+                      type="button"
                     >
                       5%
                     </button>
                   </div>
-                  <div class="col-6 col-md-4 mb-3 pe-md-0">
-                    <div
-                      class="btn btn-lg btn-secondary w-100 fw-bold p-1 fs-4"
+                  <div class="col-6 col-md-4 mb-3">
+                    <button
+                      class="btn btn-lg btn-secondary fw-bold p-1 fs-4 text-danger w-100"
+                      type="button"
                     >
                       10%
-                    </div>
+                    </button>
                   </div>
-                  <div class="col-6 col-md-4 mb-3 pe-md-0">
-                    <div
-                      class="btn btn-lg btn-secondary w-100 fw-bold p-1 fs-4"
+                  <div class="col-6 col-md-4 mb-3">
+                    <button
+                      class="btn btn-lg btn-secondary fw-bold p-1 fs-4 text-danger w-100"
+                      type="button"
                     >
                       15%
-                    </div>
+                    </button>
                   </div>
-                  <div class="col-6 col-md-4 mb-3 pe-md-0">
-                    <div
-                      class="btn btn-lg btn-secondary w-100 fw-bold p-1 fs-4"
+                  <div class="col-6 col-md-4 mb-3">
+                    <button
+                      class="btn btn-lg btn-secondary fw-bold p-1 fs-4 text-danger w-100"
+                      type="button"
                     >
                       25%
-                    </div>
+                    </button>
                   </div>
-                  <div class="col-6 col-md-4 pe-md-0">
-                    <div
-                      class="btn btn-lg btn-secondary w-100 fw-bold p-1 fs-4"
+                  <div class="col-6 col-md-4">
+                    <button
+                      class="btn btn-lg btn-secondary fw-bold p-1 fs-4 text-danger w-100"
+                      type="button"
                     >
                       50%
-                    </div>
+                    </button>
                   </div>
-                  <div class="col-6 col-md-4 pe-md-0">
+                  <div class="col-6 col-md-4">
                     <input
                       type="number"
-                      class="form-control form-control-sm fw-bold fs-4 border-0 bg-danger fw-bold fs-4 text-secondary"
+                      class="input-tip form-control form-control-sm fw-bold fs-4 border-0 bg-danger fw-bold fs-4 text-secondary"
                       name="custom-tip"
                       id="custom-tip"
                       placeholder="Custom"
@@ -111,39 +119,61 @@
                 <label for="numOfPeople" class="form-label fw-bold text-success"
                   >Number of People</label
                 >
-                <div class="input-group mb-4">
-                  <span class="input-group-text bg-danger border-0">
-                    <img src="/assets/images/icon-person.svg" alt="" />
-                  </span>
+                <div class="input-group mb-4 position-relative">
+                  <img
+                    src="/assets/images/icon-person.svg"
+                    alt=""
+                    class="input-img"
+                  />
                   <input
                     type="number"
                     name="numOfPeople"
                     id="numOfPeople"
-                    class="form-control border-0 bg-danger fw-bold fs-4 text-secondary"
+                    class="form-control border-0 bg-danger fw-bold fs-4 text-secondary rounded"
                     required
+                    placeholder="0"
                   />
                 </div>
               </form>
-              <div class="col-12 col-md-6 bg-secondary results rounded-1">
+              <div class="col-12 col-md-6 bg-secondary results p-4">
                 <div class="d-flex flex-column justify-content-around h-100">
-                  <div class="tip-amount d-flex justify-content-between">
-                    <h6>Tip Amount <span> / person</span></h6>
-                    <p class="" id="value-amount">$0.00</p>
+                  <div
+                    class="tip-amount d-flex justify-content-between align-items-center"
+                  >
+                    <h6 class="text-danger fw-bold">
+                      Tip Amount
+                      <span class="span-title text-success"> / person</span>
+                    </h6>
+                    <p class="text-primary fs-1 fw-bold" id="value-amount">
+                      $0.00
+                    </p>
                   </div>
-                  <div class="total-person d-flex justify-content-between">
-                    <h6>Total <span> / person</span></h6>
-                    <p id="value-total">$0.00</p>
+                  <div
+                    class="total-person d-flex justify-content-between align-items-center mb-5"
+                  >
+                    <h6 class="text-danger fw-bold">
+                      Total
+                      <span class="span-title text-success"> / person</span>
+                    </h6>
+                    <p class="text-primary fs-1 fw-bold" id="value-total">
+                      $0.00
+                    </p>
                   </div>
-                  <button class="btn btn-primary btn-lg">RESET</button>
+                  <button
+                    type="button"
+                    class="btn btn-primary btn-lg text-secondary fw-bold fs-3 disabled"
+                  >
+                    RESET
+                  </button>
                 </div>
-                <div class="attribution">
-                  Challenge by
-                  <a
-                    href="https://www.frontendmentor.io?ref=challenge"
-                    target="_blank"
-                    >Frontend Mentor</a
-                  >. Coded by <a href="#">RokuFSD</a>.
-                </div>
+              </div>
+              <div class="attribution mt-3">
+                Challenge by
+                <a
+                  href="https://www.frontendmentor.io?ref=challenge"
+                  target="_blank"
+                  >Frontend Mentor</a
+                >. Coded by <a href="#">RokuFSD</a>.
               </div>
             </div>
           </div>
