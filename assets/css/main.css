@@ -726,6 +726,10 @@ button:not(:disabled),
   margin-bottom: 3rem !important;
 }
 
+.mt-n3 {
+  margin-top: -1rem !important;
+}
+
 .p-0 {
   padding: 0 !important;
 }
@@ -824,6 +828,10 @@ button:not(:disabled),
 
   .mb-md-5 {
     margin-bottom: 3rem !important;
+  }
+
+  .mt-md-n5 {
+    margin-top: -3rem !important;
   }
 
   .px-md-0 {
