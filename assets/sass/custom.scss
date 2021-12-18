@@ -28,6 +28,7 @@ $container-max-widths: (
   }
 }
 
+$enable-negative-margins: true;
 /*=========== Custom input =================*/
 $input-placeholder-color: $info;
 $input-btn-focus-color: rgba(darken($primary, 2), 1);
