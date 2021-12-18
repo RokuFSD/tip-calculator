@@ -1,0 +1,59 @@
+/* =================== Google Fonts ======================== */
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+h2 {
+  letter-spacing: 0.5rem;
+}
+
+input {
+  direction: rtl;
+}
+
+span {
+  display: block;
+}
+
+.title {
+  margin-top: -1rem;
+}
+
+.custom-input {
+  max-width: 8.25rem;
+}
+
+.results {
+  min-height: 15rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+$font-family-sans-serif: "Space Mono", sans-serif;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 960px,
+  xxl: 920px,
+);
+
+$primary: hsl(172, 67%, 45%) !default;
+$secondary: hsl(183, 100%, 15%) !default;
+$success: hsl(186, 14%, 43%) !default;
+$info: hsl(184, 14%, 56%) !default;
+$warning: hsl(185, 41%, 84%) !default;
+$danger: hsl(189, 41%, 97%) !default;
+$light: hsl(0, 0%, 100%);
+
+$border-radius: 1.5rem;
+$border-radius-sm: 1rem;
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
