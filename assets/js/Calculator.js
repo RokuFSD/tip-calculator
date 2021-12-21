@@ -18,10 +18,10 @@ class Calculator {
   }
 
   evaluateTip() {
-    return (this._bill * this._tip) / 100 / this._numberPeople;
+    return ((this._bill * this._tip) / 100 ) / this._numberPeople;
   }
 
   evaluateTotal() {
-    return this._bill / this._numberPeople;
+    return (this._bill  / this._numberPeople) + this.evaluateTip();
   }
 }
