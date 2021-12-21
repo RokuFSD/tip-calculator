@@ -2,24 +2,27 @@ const buttons = document.querySelectorAll(".btn-secondary");
 const buttonReset = document.querySelector(".btn-primary");
 const form = document.querySelector("form");
 const inputs = form.querySelectorAll("input");
-
 const calculadora = new Calculator;
 
 /*========= Reset form =========*/
 const clearForm = () => {
   let selectedButton = document.querySelector(".btn-active");
   let errorMsg = document.querySelector(".msg-error");
-
   form.reset();
+
+  document.querySelector("#tip-amount").innerHTML = "$0.00";
+  document.querySelector("#total-amount").innerHTML = "$0.00";
   buttonReset.classList.add("disabled");
 
   if (selectedButton) {
     selectedButton.classList.toggle("btn-active");
   }
+
   if (errorMsg) {
     errorMsg.previousElementSibling.classList.remove("error");
     errorMsg.remove();
   }
+
 };
 
 /*========= Print results ==============*/
