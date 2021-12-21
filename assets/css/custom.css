@@ -12,6 +12,7 @@
 input {
   text-align: right;
   border-radius: 2rem;
+  cursor: pointer;
 }
 
 .custom-input {
@@ -31,9 +32,16 @@ input {
 
 /*=========== Custom btns ==============*/
 /* I don't like the way I solved this, because of the use of !important, if there is a better way to solve it please leave a comment */
+.btn-active {
+  background-color: #26c0ab !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  color: #00494d !important;
+}
+
 .btn-primary:hover,
 .btn-primary:focus {
-  border-color: transparent !important;
+  border-color: none !important;
   box-shadow: none !important;
 }
 
@@ -46,20 +54,14 @@ input {
   border: none !important;
 }
 
-.btn-secondary:hover,
-.btn-secondary:focus {
+.btn-secondary:hover {
   border-color: transparent !important;
-  box-shadow: none !important;
+  background-color: #c5e4e7 !important;
   color: #00494d !important;
 }
 
-.btn-secondary:hover {
-  background-color: #c5e4e7 !important;
-}
-
-.btn-secondary:focus,
-.btn-secondary:active {
-  background-color: #26c0ab !important;
+.btn-secondary:focus {
+  box-shadow: none !important;
 }
 
 /*================= BASE ====================*/
@@ -86,6 +88,24 @@ h2, .h2 {
 }
 .results p {
   font-size: 2.5rem !important;
+}
+
+/*============ Form errors ===============*/
+.msg-error {
+  position: absolute;
+  color: red;
+  top: -2rem;
+  right: 0;
+}
+@media (max-width: 540px) {
+  .msg-error {
+    top: -1.8rem;
+    font-size: 0.8rem;
+  }
+}
+
+.error {
+  box-shadow: 0 0 0 1px red !important;
 }
 
 /*========== Remove arrows from input =============*/

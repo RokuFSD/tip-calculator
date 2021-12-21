@@ -19,7 +19,7 @@ $container-max-widths: (
   md: 760px,
   lg: 960px,
   xl: 960px,
-  xxl: 960px,
+  xxl: 960px
 );
 
 @media (max-width: 767px) {
@@ -29,6 +29,7 @@ $container-max-widths: (
 }
 
 $enable-negative-margins: true;
+
 /*=========== Custom input =================*/
 $input-placeholder-color: $info;
 $input-btn-focus-color: rgba(darken($primary, 2), 1);
@@ -37,6 +38,7 @@ $input-btn-focus-width: 2px;
 input {
   text-align: right;
   border-radius: 2rem;
+  cursor: pointer;
 }
 
 .custom-input {
@@ -54,13 +56,23 @@ input {
   z-index: 1000;
 }
 
+
 /*=========== Custom btns ==============*/
 
 /* I don't like the way I solved this, because of the use of !important, if there is a better way to solve it please leave a comment */
 
+.btn-active{
+  background-color: $primary !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  color: $secondary !important;
+}
+
+
+
 .btn-primary:hover,
 .btn-primary:focus {
-  border-color: transparent !important;
+  border-color: none !important;
   box-shadow: none !important;
 }
 
@@ -73,20 +85,14 @@ input {
   border: none !important;
 }
 
-.btn-secondary:hover,
-.btn-secondary:focus {
+.btn-secondary:hover {
   border-color: transparent !important;
-  box-shadow: none !important;
+  background-color: $warning !important;
   color: $secondary !important;
 }
 
-.btn-secondary:hover {
-  background-color: $warning !important;
-}
-
-.btn-secondary:focus,
-.btn-secondary:active {
-  background-color: $primary !important;
+.btn-secondary:focus{
+  box-shadow: none !important;
 }
 
 /*================= BASE ====================*/
@@ -115,6 +121,24 @@ h2 {
   p {
     font-size: 2.5rem !important;
   }
+}
+
+/*============ Form errors ===============*/
+
+.msg-error{
+  position: absolute;
+  color: red;
+  top: -2rem;
+  right: 0;
+
+  @media (max-width: 540px){
+    top: -1.8rem;
+    font-size: .8rem;
+  }
+}
+
+.error{
+  box-shadow: 0 0 0 1px red !important;
 }
 
 /*========== Remove arrows from input =============*/
