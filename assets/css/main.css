@@ -12,6 +12,7 @@
 input {
   text-align: right;
   border-radius: 2rem;
+  cursor: pointer;
 }
 
 .input-tip::placeholder {
@@ -27,9 +28,11 @@ input {
 
 /*=========== Custom btns ==============*/
 /* I don't like the way I solved this, because of the use of !important, if there is a better way to solve it please leave a comment */
+
+.btn-primary,
 .btn-primary:hover,
 .btn-primary:focus {
-  border-color: transparent !important;
+  border: none !important;
   box-shadow: none !important;
 }
 
@@ -42,20 +45,14 @@ input {
   border: none !important;
 }
 
-.btn-secondary:hover,
-.btn-secondary:focus {
+.btn-secondary:hover {
   border-color: transparent !important;
-  box-shadow: none !important;
+  background-color: #c5e4e7 !important;
   color: #00494d !important;
 }
 
-.btn-secondary:hover {
-  background-color: #c5e4e7 !important;
-}
-
-.btn-secondary:focus,
-.btn-secondary:active {
-  background-color: #26c0ab !important;
+.btn-secondary:focus {
+  box-shadow: none !important;
 }
 
 /*================= BASE ====================*/
@@ -83,6 +80,8 @@ h2, .h2 {
 .results p {
   font-size: 2.5rem !important;
 }
+
+/*============ Form errors ===============*/
 
 /*========== Remove arrows from input =============*/
 input::-webkit-outer-spin-button,
@@ -248,11 +247,13 @@ button {
 }
 
 button,
-[type=button] {
+[type=button],
+[type=reset] {
   -webkit-appearance: button;
 }
 button:not(:disabled),
-[type=button]:not(:disabled) {
+[type=button]:not(:disabled),
+[type=reset]:not(:disabled) {
   cursor: pointer;
 }
 

@@ -62,17 +62,16 @@ input {
 /* I don't like the way I solved this, because of the use of !important, if there is a better way to solve it please leave a comment */
 
 .btn-active{
+  color: $secondary !important;
   background-color: $primary !important;
   border-color: transparent !important;
   box-shadow: none !important;
-  color: $secondary !important;
 }
 
-
-
+.btn-primary,
 .btn-primary:hover,
 .btn-primary:focus {
-  border-color: none !important;
+  border:none !important;
   box-shadow: none !important;
 }
 
