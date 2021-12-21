@@ -5,6 +5,7 @@ const inputs = form.querySelectorAll("input");
 
 const calculadora = new Calculator;
 
+/*========= Reset form =========*/
 const clearForm = () => {
   let selectedButton = document.querySelector(".btn-active");
   let errorMsg = document.querySelector(".msg-error");
@@ -21,6 +22,7 @@ const clearForm = () => {
   }
 };
 
+/*========= Print results ==============*/
 const printResults = () => {
   let tipAmount = document.querySelector('#tip-amount');
   let totalAmount = document.querySelector('#total-amount');
@@ -31,6 +33,7 @@ const printResults = () => {
   }
 }
 
+/*========== Update values and calls the function to print results ============== */
 const updateValue = (e) => {
   buttonReset.classList.remove("disabled");
 
@@ -50,6 +53,8 @@ const updateValue = (e) => {
 
 };
 
+
+/*=============== set values to calculator object =============*/
 const setBill = (value) => {
   calculadora.bill = Number(value);
 };
@@ -62,6 +67,7 @@ const setNumberPeople = (value) => {
   calculadora.numberPeople = Number(value);
 };
 
+/*============== Validates input element (print error)==============*/
 const validar = (elemento) => {
   let actual = document.querySelector(".msg-error");
 
@@ -77,12 +83,14 @@ const validar = (elemento) => {
   }
 };
 
-buttonReset.addEventListener("click", clearForm);
+buttonReset.addEventListener("click", clearForm); 
 
+/*=========== Update form on change of inputs ============*/
 for (let input of inputs) {
   input.addEventListener("change", updateValue);
 }
 
+/*=========== Set buttons css and send value of button selected =============*/
 for (let button of buttons) {
   button.addEventListener("click", () => {
     let actualButton = document.querySelector(".btn-active");
@@ -96,6 +104,8 @@ for (let button of buttons) {
     printResults();
   });
 }
+
+/*=========== Custom input in buttons section, set styles ===============*/
 
 inputs[1].addEventListener("change", () => {
   let buttonActive = document.querySelector(".btn-active");
