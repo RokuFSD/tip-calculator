@@ -9,116 +9,7 @@
   }
 }
 /*=========== Custom input =================*/
-input {
-  text-align: right;
-  border-radius: 2rem;
-  cursor: pointer;
-}
-
-.custom-input {
-  max-width: 8.25rem;
-}
-
-.input-tip::placeholder {
-  text-align: center;
-}
-
-.input-img {
-  position: absolute;
-  top: 15px;
-  left: 0.5rem;
-  z-index: 1000;
-}
-
-/*=========== Custom btns ==============*/
-/* I don't like the way I solved this, because of the use of !important, if there is a better way to solve it please leave a comment */
-.btn-active {
-  background-color: #26c0ab !important;
-  border-color: transparent !important;
-  box-shadow: none !important;
-  color: #00494d !important;
-}
-
-.btn-primary:hover,
-.btn-primary:focus {
-  border-color: none !important;
-  box-shadow: none !important;
-}
-
-.btn-primary:hover {
-  background-color: #c5e4e7 !important;
-}
-
-.disabled {
-  background-color: rgba(235, 239, 240, 0.2) !important;
-  border: none !important;
-}
-
-.btn-secondary:hover {
-  border-color: transparent !important;
-  background-color: #c5e4e7 !important;
-  color: #00494d !important;
-}
-
-.btn-secondary:focus {
-  box-shadow: none !important;
-}
-
-/*================= BASE ====================*/
-h2, .h2 {
-  letter-spacing: 0.5rem;
-}
-
-.span-title {
-  display: block;
-}
-
-.tip-container {
-  border-radius: 1rem 1rem 0 0;
-}
-@media (min-width: 758px) {
-  .tip-container {
-    border-radius: 1rem;
-  }
-}
-
-.results {
-  min-height: 15rem;
-  border-radius: 1rem;
-}
-.results p {
-  font-size: 2.5rem !important;
-}
-
-/*============ Form errors ===============*/
-.msg-error {
-  position: absolute;
-  color: red;
-  top: -2rem;
-  right: 0;
-}
-@media (max-width: 540px) {
-  .msg-error {
-    top: -1.8rem;
-    font-size: 0.8rem;
-  }
-}
-
-.error {
-  box-shadow: 0 0 0 1px red !important;
-}
-
-/*========== Remove arrows from input =============*/
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-input[type=number] {
-  -moz-appearance: textfield;
-}
-
+/*=========== Bootstrap ================*/
 /*!
  * Bootstrap v5.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -12137,6 +12028,116 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+}
+input {
+  text-align: right;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.custom-input {
+  max-width: 8.25rem;
+}
+
+.input-tip::placeholder {
+  text-align: center;
+}
+
+.input-img {
+  position: absolute;
+  top: 15px;
+  left: 0.5rem;
+  z-index: 1000;
+}
+
+/*=========== Custom btns ==============*/
+/* I don't like the way I solved this, because of the use of !important, if there is a better way to solve it please leave a comment */
+.btn-active {
+  color: #00494d !important;
+  background-color: #26c0ab !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.btn-primary:hover {
+  background-color: #c5e4e7 !important;
+}
+
+.disabled {
+  background-color: rgba(235, 239, 240, 0.2) !important;
+  border: none !important;
+}
+
+.btn-secondary:hover {
+  border-color: transparent !important;
+  background-color: #c5e4e7 !important;
+  color: #00494d !important;
+}
+
+.btn-secondary:focus {
+  box-shadow: none !important;
+}
+
+/*================= BASE ====================*/
+h2, .h2 {
+  letter-spacing: 0.5rem;
+}
+
+.span-title {
+  display: block;
+}
+
+.tip-container {
+  border-radius: 1rem 1rem 0 0;
+}
+@media (min-width: 758px) {
+  .tip-container {
+    border-radius: 1rem;
+  }
+}
+
+.results {
+  min-height: 15rem;
+  border-radius: 1rem;
+}
+.results p {
+  font-size: 2.5rem !important;
+}
+
+/*============ Form errors ===============*/
+.msg-error {
+  position: absolute;
+  color: red;
+  top: -2rem;
+  right: 0;
+}
+@media (max-width: 540px) {
+  .msg-error {
+    top: -1.8rem;
+    font-size: 0.8rem;
+  }
+}
+
+.error {
+  box-shadow: 0 0 0 1px red !important;
+}
+
+/*========== Remove arrows from input =============*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 /*# sourceMappingURL=custom.css.map */
